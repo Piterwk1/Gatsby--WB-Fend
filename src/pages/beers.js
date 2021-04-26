@@ -38,9 +38,9 @@ export default function BeersPage({ data }) {
               <h3>{beer.name}</h3>
               {beer.price}
               <p title={`${rating} out of 5 starts`}>
-                {`✨`.repeat(rating)}
+                {`⭐️`.repeat(rating)}
                 <span style={{ filter: 'grayscale(100%)' }}>
-                  {`✨`.repeat(5 - rating)}
+                  {`⭐️`.repeat(5 - rating)}
                 </span>
                 <span>({beer.rating.reviews})</span>
               </p>
