@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('C:/MOJE/JS/WES BOSS/GATSBY/master-gatsby-master/master-gatsby-master/starter-files/gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('C:/MOJE/JS/WES BOSS/GATSBY/master-gatsby-master/master-gatsby-master/starter-files/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{

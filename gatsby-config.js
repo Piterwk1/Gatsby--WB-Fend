@@ -39,8 +39,10 @@ module.exports = {
     title: `Slicks Slices`,
     siteUrl: `https://gaysby.pizza`,
     description: `The best pizza place in Hamilton!`,
+    twitter: '@slicksSlices',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-styled-components`,
     },
