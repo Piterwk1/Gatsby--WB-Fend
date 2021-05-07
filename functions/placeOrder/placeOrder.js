@@ -34,7 +34,14 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+function wait(ms = 0) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 exports.handler = async (event, context) => {
+  await wait(5000);
   const body = JSON.parse(event.body);
   console.log(body);
   const requiredFields = ['email', 'name', 'order'];
@@ -51,18 +58,14 @@ exports.handler = async (event, context) => {
     }
   }
 
-  //   const info = await transporter.sendMail({
-  //     from: "Slick's Slices <slick@example.com>",
-  //     to: 'order@example.com',
-  //     subject: 'New order',
-  //     html: '<p>Your new pizza order is here!</p>',
-  //   });
-  //   console.log(info);
-  //   return {
-  //     statusCode: 200,
-  //     body: JSON.stringify(info),
-  //   };
-  // };
+  if (!body.order.length) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        message: `Why would you order nothing?!`,
+      }),
+    };
+  }
 
   const info = await transporter.sendMail({
     from: "Slick's Slices <slick@example.com>",
