@@ -44,14 +44,14 @@ const NavStyles = styled.nav`
     &:hover {
       color: var(--red);
     }
-    @media (max-width: 800) {
+    @media (max-width: 800px) {
       font-size: 2rem;
     }
     /* &[aria-current='page'] {
-      color: red;
+      color: var(--red);
     } */
   }
-  @media (max-width: 600) {
+  @media (max-width: 600px) {
     --columns: 4;
     margin-bottom: 2rem;
     border-bottom: 2px solid var(--grey);
@@ -69,7 +69,7 @@ const NavStyles = styled.nav`
       transform: none;
     }
   }
-  @media (max-width: 500) {
+  @media (max-width: 500px) {
     --columns: 2;
   }
 `;
