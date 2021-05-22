@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 
 const SlicemastersGrid = styled.div`
   display: grid;
-  gap: 2rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 `;
 
